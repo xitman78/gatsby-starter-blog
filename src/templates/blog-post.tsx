@@ -1,12 +1,37 @@
-import React from "react"
+import * as React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
-class BlogPostTemplate extends React.Component {
+const StyledUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`
+
+const StyledHr = styled.hr`
+  margin-bottom: ${rhythm(1)};
+`
+
+const DateParagraph = styled.p`
+  font-size: ${scale(-1 / 5).fontSize};
+  line-height: ${scale(-1 / 5).lineHeight};
+  display: block;
+  marginBottom: ${rhythm(1)};
+  marginTop: ${rhythm(-1)};
+`
+
+class BlogPostTemplate extends React.Component<{
+  data: any,
+  location: string,
+  pageContext: any,
+}> {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -16,33 +41,14 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
+        <DateParagraph>
           {post.frontmatter.date}
-        </p>
+        </DateParagraph>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <StyledHr />
         <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <StyledUl>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -57,7 +63,7 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </li>
-        </ul>
+        </StyledUl>
       </Layout>
     )
   }

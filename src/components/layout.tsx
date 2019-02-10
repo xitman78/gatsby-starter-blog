@@ -30,7 +30,11 @@ const HomeLink = styled(Link)`
   color: inherit;
 `
 
-class Layout extends React.Component {
+class Layout extends React.Component<{
+  location: any,
+  title: string,
+  children: any,
+}> {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
