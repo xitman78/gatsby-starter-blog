@@ -1,18 +1,19 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
-// import { rhythm, scale } from "../utils/typography"
+const MenuWrapper = styled.div`
+  margin-bottom: 40px;
+`
+const StyledLink = styled(Link)`
+  margin-right: 20px;
+`
 
-class Menu extends React.Component {
-  render() {
-    return (<div
-      style={{
-        marginBottom: `20px`,
-      }}>
-      <Link to={"/"}>Home</Link>&nbsp;&nbsp;
-      <Link to={"/about"}>About Me</Link>
-    </div>);
-  }
-}
+const Menu = () => (
+  <MenuWrapper>
+    <StyledLink to={"/"}>Home</StyledLink>
+    <StyledLink to={"/about"}>About Me</StyledLink>
+  </MenuWrapper>
+);
 
 export default Menu;
