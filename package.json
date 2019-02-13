@@ -60,6 +60,14 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "gen-types": "gql-gen --config codegen.yml"
+  },
+  "devDependencies": {
+    "graphql-code-generator": "^0.16.1",
+    "graphql-codegen-typescript-template": "^0.16.1",
+    "graphql-codegen-typescript-common": "0.16.1",
+    "graphql-codegen-introspection": "^0.16.1",
+    "graphql-codegen-typescript-client": "^0.16.1"
   }
 }
