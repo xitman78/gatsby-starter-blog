@@ -6,15 +6,13 @@ import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 
 const H1Title = styled.h1`
-  font-size: ${scale(1.5).fontSize};
-  line-height: ${scale(1.5).lineHeught};
   margin-bottom: ${rhythm(1.5)};
   margin-top: 0;
 `
 
 const H3Title = styled.h3`
-  font-family: Montserrat, sans-serif;
   margin-top: 0;
+  color: #888888;
 `
 
 const MainWrapper = styled.div`

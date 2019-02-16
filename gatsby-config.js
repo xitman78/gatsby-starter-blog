@@ -76,5 +76,15 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Source Serif Pro`,
+          },
+        ],
+      },
+    }
   ],
 }
