@@ -307,6 +307,30 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
     SitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString
   >;
 
+  backgroundColor?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean
+  >;
+
+  showCaptions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean
+  >;
+
+  pathPrefix?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString
+  >;
+
+  withWebp?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsWithWebpQueryBoolean
+  >;
+
+  ignoreFileExtensions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
+  >;
+
   short_name?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsShortNameQueryString
   >;
@@ -316,7 +340,7 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
   >;
 
   background_color?: Maybe<
-    SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString
+    SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString_2
   >;
 
   theme_color?: Maybe<
@@ -432,6 +456,30 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOption
   wrapperStyle?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString
   >;
+
+  backgroundColor?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean
+  >;
+
+  showCaptions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean
+  >;
+
+  pathPrefix?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString
+  >;
+
+  withWebp?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean
+  >;
+
+  ignoreFileExtensions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
+  >;
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
@@ -453,6 +501,78 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOption
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -540,6 +660,78 @@ export interface SitePageConnectionPluginCreatorPluginOptionsWrapperStyleQuerySt
   nin?: Maybe<string[]>;
 }
 
+export interface SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsWithWebpQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
 export interface SitePageConnectionPluginCreatorPluginOptionsShortNameQueryString {
   eq?: Maybe<string>;
 
@@ -568,7 +760,7 @@ export interface SitePageConnectionPluginCreatorPluginOptionsStartUrlQueryString
   nin?: Maybe<string[]>;
 }
 
-export interface SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString {
+export interface SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -1207,12 +1399,32 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
     SitePluginConnectionPluginOptionsWrapperStyleQueryString_2
   >;
 
+  backgroundColor?: Maybe<
+    SitePluginConnectionPluginOptionsBackgroundColorQueryString_3
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoolean_2
+  >;
+
+  showCaptions?: Maybe<
+    SitePluginConnectionPluginOptionsShowCaptionsQueryBoolean_2
+  >;
+
+  pathPrefix?: Maybe<SitePluginConnectionPluginOptionsPathPrefixQueryString_2>;
+
+  withWebp?: Maybe<SitePluginConnectionPluginOptionsWithWebpQueryBoolean_2>;
+
+  ignoreFileExtensions?: Maybe<
+    SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2
+  >;
+
   short_name?: Maybe<SitePluginConnectionPluginOptionsShortNameQueryString_2>;
 
   start_url?: Maybe<SitePluginConnectionPluginOptionsStartUrlQueryString_2>;
 
   background_color?: Maybe<
-    SitePluginConnectionPluginOptionsBackgroundColorQueryString_2
+    SitePluginConnectionPluginOptionsBackgroundColorQueryString_4
   >;
 
   theme_color?: Maybe<SitePluginConnectionPluginOptionsThemeColorQueryString_2>;
@@ -1314,6 +1526,30 @@ export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObjec
   wrapperStyle?: Maybe<
     SitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2
   >;
+
+  backgroundColor?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2
+  >;
+
+  showCaptions?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2
+  >;
+
+  pathPrefix?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2
+  >;
+
+  withWebp?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2
+  >;
+
+  ignoreFileExtensions?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
+  >;
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
@@ -1335,6 +1571,78 @@ export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQu
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -1422,6 +1730,78 @@ export interface SitePluginConnectionPluginOptionsWrapperStyleQueryString_2 {
   nin?: Maybe<string[]>;
 }
 
+export interface SitePluginConnectionPluginOptionsBackgroundColorQueryString_3 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsPathPrefixQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
 export interface SitePluginConnectionPluginOptionsShortNameQueryString_2 {
   eq?: Maybe<string>;
 
@@ -1450,7 +1830,7 @@ export interface SitePluginConnectionPluginOptionsStartUrlQueryString_2 {
   nin?: Maybe<string[]>;
 }
 
-export interface SitePluginConnectionPluginOptionsBackgroundColorQueryString_2 {
+export interface SitePluginConnectionPluginOptionsBackgroundColorQueryString_4 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -4949,12 +5329,32 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
     SitePagePluginCreatorPluginOptionsWrapperStyleQueryString
   >;
 
+  backgroundColor?: Maybe<
+    SitePagePluginCreatorPluginOptionsBackgroundColorQueryString
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean
+  >;
+
+  showCaptions?: Maybe<
+    SitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean
+  >;
+
+  pathPrefix?: Maybe<SitePagePluginCreatorPluginOptionsPathPrefixQueryString>;
+
+  withWebp?: Maybe<SitePagePluginCreatorPluginOptionsWithWebpQueryBoolean>;
+
+  ignoreFileExtensions?: Maybe<
+    SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
+  >;
+
   short_name?: Maybe<SitePagePluginCreatorPluginOptionsShortNameQueryString>;
 
   start_url?: Maybe<SitePagePluginCreatorPluginOptionsStartUrlQueryString>;
 
   background_color?: Maybe<
-    SitePagePluginCreatorPluginOptionsBackgroundColorQueryString
+    SitePagePluginCreatorPluginOptionsBackgroundColorQueryString_2
   >;
 
   theme_color?: Maybe<SitePagePluginCreatorPluginOptionsThemeColorQueryString>;
@@ -5056,6 +5456,30 @@ export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObje
   wrapperStyle?: Maybe<
     SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString
   >;
+
+  backgroundColor?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean
+  >;
+
+  showCaptions?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean
+  >;
+
+  pathPrefix?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString
+  >;
+
+  withWebp?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean
+  >;
+
+  ignoreFileExtensions?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
+  >;
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
@@ -5077,6 +5501,78 @@ export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQ
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5164,6 +5660,78 @@ export interface SitePagePluginCreatorPluginOptionsWrapperStyleQueryString {
   nin?: Maybe<string[]>;
 }
 
+export interface SitePagePluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsWithWebpQueryBoolean {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
 export interface SitePagePluginCreatorPluginOptionsShortNameQueryString {
   eq?: Maybe<string>;
 
@@ -5192,7 +5760,7 @@ export interface SitePagePluginCreatorPluginOptionsStartUrlQueryString {
   nin?: Maybe<string[]>;
 }
 
-export interface SitePagePluginCreatorPluginOptionsBackgroundColorQueryString {
+export interface SitePagePluginCreatorPluginOptionsBackgroundColorQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5783,11 +6351,27 @@ export interface SitePluginPluginOptionsInputObject_2 {
 
   wrapperStyle?: Maybe<SitePluginPluginOptionsWrapperStyleQueryString_2>;
 
+  backgroundColor?: Maybe<SitePluginPluginOptionsBackgroundColorQueryString_3>;
+
+  linkImagesToOriginal?: Maybe<
+    SitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2
+  >;
+
+  showCaptions?: Maybe<SitePluginPluginOptionsShowCaptionsQueryBoolean_2>;
+
+  pathPrefix?: Maybe<SitePluginPluginOptionsPathPrefixQueryString_2>;
+
+  withWebp?: Maybe<SitePluginPluginOptionsWithWebpQueryBoolean_2>;
+
+  ignoreFileExtensions?: Maybe<
+    SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2
+  >;
+
   short_name?: Maybe<SitePluginPluginOptionsShortNameQueryString_2>;
 
   start_url?: Maybe<SitePluginPluginOptionsStartUrlQueryString_2>;
 
-  background_color?: Maybe<SitePluginPluginOptionsBackgroundColorQueryString_2>;
+  background_color?: Maybe<SitePluginPluginOptionsBackgroundColorQueryString_4>;
 
   theme_color?: Maybe<SitePluginPluginOptionsThemeColorQueryString_2>;
 
@@ -5888,6 +6472,30 @@ export interface SitePluginPluginOptionsPluginsPluginOptionsInputObject_2 {
   wrapperStyle?: Maybe<
     SitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2
   >;
+
+  backgroundColor?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2
+  >;
+
+  linkImagesToOriginal?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2
+  >;
+
+  showCaptions?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2
+  >;
+
+  pathPrefix?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2
+  >;
+
+  withWebp?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2
+  >;
+
+  ignoreFileExtensions?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
+  >;
 }
 
 export interface SitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
@@ -5909,6 +6517,78 @@ export interface SitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger
 }
 
 export interface SitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5996,6 +6676,78 @@ export interface SitePluginPluginOptionsWrapperStyleQueryString_2 {
   nin?: Maybe<string[]>;
 }
 
+export interface SitePluginPluginOptionsBackgroundColorQueryString_3 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsPathPrefixQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: Maybe<boolean>;
+
+  ne?: Maybe<boolean>;
+
+  in?: Maybe<boolean[]>;
+
+  nin?: Maybe<boolean[]>;
+}
+
+export interface SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
 export interface SitePluginPluginOptionsShortNameQueryString_2 {
   eq?: Maybe<string>;
 
@@ -6024,7 +6776,7 @@ export interface SitePluginPluginOptionsStartUrlQueryString_2 {
   nin?: Maybe<string[]>;
 }
 
-export interface SitePluginPluginOptionsBackgroundColorQueryString_2 {
+export interface SitePluginPluginOptionsBackgroundColorQueryString_4 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -9284,6 +10036,12 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsMaxWidth = "pluginOptions___maxWidth",
   PluginOptionsWrapperStyle = "pluginOptions___wrapperStyle",
+  PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
+  PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
+  PluginOptionsShowCaptions = "pluginOptions___showCaptions",
+  PluginOptionsPathPrefix = "pluginOptions___pathPrefix",
+  PluginOptionsWithWebp = "pluginOptions___withWebp",
+  PluginOptionsIgnoreFileExtensions = "pluginOptions___ignoreFileExtensions",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
   PluginOptionsBackgroundColor = "pluginOptions___background_color",
@@ -9326,6 +10084,12 @@ export enum SitePluginDistinctEnum {
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsMaxWidth = "pluginOptions___maxWidth",
   PluginOptionsWrapperStyle = "pluginOptions___wrapperStyle",
+  PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
+  PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
+  PluginOptionsShowCaptions = "pluginOptions___showCaptions",
+  PluginOptionsPathPrefix = "pluginOptions___pathPrefix",
+  PluginOptionsWithWebp = "pluginOptions___withWebp",
+  PluginOptionsIgnoreFileExtensions = "pluginOptions___ignoreFileExtensions",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
   PluginOptionsBackgroundColor = "pluginOptions___background_color",
@@ -9363,6 +10127,12 @@ export enum SitePluginGroupEnum {
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsMaxWidth = "pluginOptions___maxWidth",
   PluginOptionsWrapperStyle = "pluginOptions___wrapperStyle",
+  PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
+  PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
+  PluginOptionsShowCaptions = "pluginOptions___showCaptions",
+  PluginOptionsPathPrefix = "pluginOptions___pathPrefix",
+  PluginOptionsWithWebp = "pluginOptions___withWebp",
+  PluginOptionsIgnoreFileExtensions = "pluginOptions___ignoreFileExtensions",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
   PluginOptionsBackgroundColor = "pluginOptions___background_color",
@@ -9863,6 +10633,64 @@ export type AboutPageSite = {
 
 export type AboutPageSiteMetadata = {
   __typename?: "siteMetadata_2";
+
+  title: Maybe<string>;
+};
+
+export type IndexPageVariables = {};
+
+export type IndexPageQuery = {
+  __typename?: "Query";
+
+  site: Maybe<IndexPageSite>;
+
+  allMarkdownRemark: Maybe<IndexPageAllMarkdownRemark>;
+};
+
+export type IndexPageSite = {
+  __typename?: "Site";
+
+  siteMetadata: Maybe<IndexPageSiteMetadata>;
+};
+
+export type IndexPageSiteMetadata = {
+  __typename?: "siteMetadata_2";
+
+  title: Maybe<string>;
+};
+
+export type IndexPageAllMarkdownRemark = {
+  __typename?: "MarkdownRemarkConnection";
+
+  edges: Maybe<IndexPageEdges[]>;
+};
+
+export type IndexPageEdges = {
+  __typename?: "MarkdownRemarkEdge";
+
+  node: Maybe<IndexPageNode>;
+};
+
+export type IndexPageNode = {
+  __typename?: "MarkdownRemark";
+
+  excerpt: Maybe<string>;
+
+  fields: Maybe<IndexPageFields>;
+
+  frontmatter: Maybe<IndexPageFrontmatter>;
+};
+
+export type IndexPageFields = {
+  __typename?: "fields_4";
+
+  slug: Maybe<string>;
+};
+
+export type IndexPageFrontmatter = {
+  __typename?: "frontmatter_4";
+
+  date: Maybe<Date>;
 
   title: Maybe<string>;
 };
