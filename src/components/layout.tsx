@@ -12,14 +12,36 @@ const H1Title = styled.h1`
 
 const H3Title = styled.h3`
   margin-top: 0;
-  color: #888888;
+  color: #21b5e2;
 `
 
 const MainWrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const MainContent = styled.div`
+  flex: 1;
   max-width: ${rhythm(24)};
-  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+`
+
+const Footer = styled.footer`
+  flex: 0;
+  padding: ${rhythm(1)} 0 ${rhythm(0.5)};
+  font-size: ${rhythm(0.5)};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, rgba(255,204,216,1) 0%, rgba(254,254,254,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+`
+
+const FooterContent = styled.div`
+  width: 100%;
+  max-width: ${rhythm(24)};
 `
 
 const HomeLink = styled(Link)`
@@ -58,13 +80,17 @@ class Layout extends React.Component<{
     return (
       <MainWrapper>
         <Menu />
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with 💗
-          {` `}
-          <a href="https://www.gatsbyjs.org">Heart</a>
-        </footer>
+        <MainContent>
+          <header>{header}</header>
+          <main>{children}</main>
+        </MainContent>
+        <Footer>
+          <FooterContent>
+            © {new Date().getFullYear()}, Built with 💗
+            {` `}
+            <a href="https://www.gatsbyjs.org">Heart</a>
+          </FooterContent>
+        </Footer>
       </MainWrapper>
     )
   }
