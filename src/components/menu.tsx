@@ -4,8 +4,6 @@ import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 
 const MenuWrapper = styled.div`
-  padding: 20px 0 40px;
-  margin-bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,6 +16,7 @@ const MenuWidthHolder = styled.div`
   width: 100%;
   max-width: ${rhythm(24)};
   text-align: left;
+  padding: 20px 10px 40px;
 `
 const StyledLink = styled(Link)`
   margin-right: 20px;

@@ -25,11 +25,11 @@ const MainWrapper = styled.div`
 const MainContent = styled.div`
   flex: 1;
   max-width: ${rhythm(24)};
+  padding: 0 10px;
 `
 
 const Footer = styled.footer`
   flex: 0;
-  padding: ${rhythm(1)} 0 ${rhythm(0.5)};
   font-size: ${rhythm(0.5)};
   width: 100%;
   display: flex;
@@ -42,6 +42,7 @@ const Footer = styled.footer`
 const FooterContent = styled.div`
   width: 100%;
   max-width: ${rhythm(24)};
+  padding: ${rhythm(1)} 10px ${rhythm(0.5)};
 `
 
 const HomeLink = styled(Link)`

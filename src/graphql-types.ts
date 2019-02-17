@@ -357,6 +357,8 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
     SitePageConnectionPluginCreatorPluginOptionsPathToConfigModuleQueryString
   >;
 
+  fonts?: Maybe<SitePageConnectionPluginCreatorPluginOptionsFontsQueryList>;
+
   pathCheck?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean
   >;
@@ -817,6 +819,32 @@ export interface SitePageConnectionPluginCreatorPluginOptionsIconQueryString {
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathToConfigModuleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFontsQueryList {
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFontsInputObject
+  >;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFontsInputObject {
+  family?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFontsFamilyQueryString
+  >;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFontsFamilyQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -1437,6 +1465,8 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
     SitePluginConnectionPluginOptionsPathToConfigModuleQueryString_2
   >;
 
+  fonts?: Maybe<SitePluginConnectionPluginOptionsFontsQueryList_2>;
+
   pathCheck?: Maybe<SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2>;
 }
 
@@ -1887,6 +1917,28 @@ export interface SitePluginConnectionPluginOptionsIconQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsPathToConfigModuleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsFontsQueryList_2 {
+  elemMatch?: Maybe<SitePluginConnectionPluginOptionsFontsInputObject_2>;
+}
+
+export interface SitePluginConnectionPluginOptionsFontsInputObject_2 {
+  family?: Maybe<SitePluginConnectionPluginOptionsFontsFamilyQueryString_2>;
+}
+
+export interface SitePluginConnectionPluginOptionsFontsFamilyQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5367,6 +5419,8 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
     SitePagePluginCreatorPluginOptionsPathToConfigModuleQueryString
   >;
 
+  fonts?: Maybe<SitePagePluginCreatorPluginOptionsFontsQueryList>;
+
   pathCheck?: Maybe<SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean>;
 }
 
@@ -5817,6 +5871,28 @@ export interface SitePagePluginCreatorPluginOptionsIconQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathToConfigModuleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsFontsQueryList {
+  elemMatch?: Maybe<SitePagePluginCreatorPluginOptionsFontsInputObject>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsFontsInputObject {
+  family?: Maybe<SitePagePluginCreatorPluginOptionsFontsFamilyQueryString>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsFontsFamilyQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -6383,6 +6459,8 @@ export interface SitePluginPluginOptionsInputObject_2 {
     SitePluginPluginOptionsPathToConfigModuleQueryString_2
   >;
 
+  fonts?: Maybe<SitePluginPluginOptionsFontsQueryList_2>;
+
   pathCheck?: Maybe<SitePluginPluginOptionsPathCheckQueryBoolean_2>;
 }
 
@@ -6833,6 +6911,28 @@ export interface SitePluginPluginOptionsIconQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsPathToConfigModuleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<string[]>;
+
+  nin?: Maybe<string[]>;
+}
+
+export interface SitePluginPluginOptionsFontsQueryList_2 {
+  elemMatch?: Maybe<SitePluginPluginOptionsFontsInputObject_2>;
+}
+
+export interface SitePluginPluginOptionsFontsInputObject_2 {
+  family?: Maybe<SitePluginPluginOptionsFontsFamilyQueryString_2>;
+}
+
+export interface SitePluginPluginOptionsFontsFamilyQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -10049,6 +10149,7 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PluginOptionsDisplay = "pluginOptions___display",
   PluginOptionsIcon = "pluginOptions___icon",
   PluginOptionsPathToConfigModule = "pluginOptions___pathToConfigModule",
+  PluginOptionsFonts = "pluginOptions___fonts",
   PluginOptionsPathCheck = "pluginOptions___pathCheck",
   NodeApIs = "nodeAPIs",
   BrowserApIs = "browserAPIs",
@@ -10097,6 +10198,7 @@ export enum SitePluginDistinctEnum {
   PluginOptionsDisplay = "pluginOptions___display",
   PluginOptionsIcon = "pluginOptions___icon",
   PluginOptionsPathToConfigModule = "pluginOptions___pathToConfigModule",
+  PluginOptionsFonts = "pluginOptions___fonts",
   PluginOptionsPathCheck = "pluginOptions___pathCheck",
   NodeApIs = "nodeAPIs",
   BrowserApIs = "browserAPIs",
@@ -10140,6 +10242,7 @@ export enum SitePluginGroupEnum {
   PluginOptionsDisplay = "pluginOptions___display",
   PluginOptionsIcon = "pluginOptions___icon",
   PluginOptionsPathToConfigModule = "pluginOptions___pathToConfigModule",
+  PluginOptionsFonts = "pluginOptions___fonts",
   PluginOptionsPathCheck = "pluginOptions___pathCheck",
   NodeApIs = "nodeAPIs",
   BrowserApIs = "browserAPIs",
