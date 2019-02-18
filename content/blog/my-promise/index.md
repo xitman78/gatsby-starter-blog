@@ -31,5 +31,5 @@ It was quite a challenge because I haven't been learning by heart any poetry sin
 >And though we are mere mortals, true love is divine,<br>
 >and my devotion eternal, to my one valentine.<br>
 
-Source: (https://www.familyfriendpoems.com/poem/my-promise-3)
+Source: https://www.familyfriendpoems.com/poem/my-promise-3
 
