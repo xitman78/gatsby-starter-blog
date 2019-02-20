@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import fireBaseService from "../services/firebase";
 
 const StyledUl = styled.ul`
   display: flex;
@@ -32,10 +33,26 @@ class BlogPostTemplate extends React.Component<{
   location: string,
   pageContext: any,
 }> {
+
+  componentDidMount() {
+    const slug = this.props.data.markdownRemark.fields.slug;
+
+    fireBaseService.comments.where('postId', '==', slug.replace(/\//g, '')).get().then(res => {
+      console.log('comments', res);
+      if (!res.empty) {
+        const comments = res.docs.map(v => v.data());
+        console.log('-- Comments', comments);
+      }
+    }).catch(err => {
+      console.error('+++++', err);
+    });
+  }
+
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const slug = post.fields.slug;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -86,6 +103,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+      fields {
+        slug
       }
     }
   }
