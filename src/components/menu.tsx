@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
-import AuthMenu   from "./authMenu";
+import AuthMenu from "./authMenu";
 
 const MenuWrapper = styled.div`
   width: 100%;
@@ -38,4 +38,4 @@ const Menu = () => (
   </MenuWrapper>
 );
 
-export default Menu;
+export default React.memo(Menu, () => true);

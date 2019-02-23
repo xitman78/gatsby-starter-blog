@@ -17,6 +17,8 @@ class Firebase {
   //@ts-ignore
   auth: typeof firebase.auth;
 
+  isSigned: boolean | undefined = undefined;
+
   constructor() { }
 
   init() {
@@ -43,6 +45,10 @@ class Firebase {
         signInSuccessWithAuthResult: () => false
       }
     };
+  }
+
+  signOut() {
+    this.auth().signOut();
   }
 }
 
