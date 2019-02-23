@@ -1,5 +1,6 @@
 import * as firebase from "firebase/app"
 import "firebase/firestore"
+require('firebase/auth') // this should be imported like that
 
 const config = {
   apiKey: "AIzaSyCrTcvY0CWsK1ZzrvnVGDBmf5891SXOi4A",
@@ -11,8 +12,12 @@ const config = {
 }
 
 class Firebase {
-  store: any;
-  auth: any;
+  //@ts-ignore
+  store: typeof firebase.firestore;
+  //@ts-ignore
+  auth: typeof firebase.auth;
+
+  constructor() { }
 
   init() {
     firebase.initializeApp(config);
@@ -22,6 +27,22 @@ class Firebase {
 
   get comments() {
     return this.store().collection('comments');
+  }
+
+  get uiConfig() {
+    return {
+      // Popup signin flow rather than redirect flow.
+      signInFlow: 'popup',
+      // We will display Google and Facebook as auth providers.
+      signInOptions: [
+        //firebaseService.auth.GoogleAuthProvider.PROVIDER_ID,
+        this.auth.FacebookAuthProvider.PROVIDER_ID
+      ],
+      callbacks: {
+        // Avoid redirects after sign-in.
+        signInSuccessWithAuthResult: () => false
+      }
+    };
   }
 }
 

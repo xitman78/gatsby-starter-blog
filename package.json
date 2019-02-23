@@ -37,6 +37,7 @@
     "prismjs": "^1.15.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-firebaseui": "^3.1.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
     "styled-components": "^4.1.3",

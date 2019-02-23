@@ -8,8 +8,29 @@ import { AboutPageQuery } from "../graphql-types"
 const PageTitle = styled.h1`
 `
 
+
 const AboutPage = ({data, location}: {data: AboutPageQuery, location: any}) =>  {
+
   const siteTitle = data!.site!.siteMetadata!.title!
+
+  // const [isSignedIn, setSigned] = useState<boolean | undefined>(undefined);
+
+  // useEffect(() => {
+  //   const { auth } = firebaseService;
+
+  //   const stopAuthListener = firebaseService.auth().onAuthStateChanged(user => {
+  //     if (user) {
+  //       setSigned(true);
+  //     } else {
+  //       setSigned(false);
+  //     }
+  //   });
+
+  //   return () => {
+  //     stopAuthListener();
+  //   }
+
+  // }, []);
 
   return (
     <Layout location={location} title={siteTitle}>

@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
+import AuthMenu   from "./authMenu";
 
 const MenuWrapper = styled.div`
   width: 100%;
@@ -17,6 +18,9 @@ const MenuWidthHolder = styled.div`
   max-width: ${rhythm(24)};
   text-align: left;
   padding: 20px 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
 const StyledLink = styled(Link)`
   margin-right: 20px;
@@ -25,8 +29,11 @@ const StyledLink = styled(Link)`
 const Menu = () => (
   <MenuWrapper>
     <MenuWidthHolder>
-      <StyledLink to={"/"}>Home</StyledLink>
-      <StyledLink to={"/about"}>About Me</StyledLink>
+      <div>
+        <StyledLink to={"/"}>Home</StyledLink>
+        <StyledLink to={"/about"}>About Me</StyledLink>
+      </div>
+      <AuthMenu />
     </MenuWidthHolder>
   </MenuWrapper>
 );
