@@ -50,6 +50,14 @@ class Firebase {
   signOut() {
     this.auth().signOut();
   }
+
+  createComment(postId: string, text: string) {
+    return this.comments.add({
+      postId: postId.replace(/\//g, ''),
+      text,
+      createdAt: this.store.Timestamp.fromDate(new Date())
+    });
+  }
 }
 
 export default new Firebase();

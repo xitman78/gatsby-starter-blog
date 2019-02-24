@@ -47,6 +47,7 @@ const AuthMenu = () => {
     const stopAuthListener = firebaseService.auth().onAuthStateChanged(user => {
       if (user) {
         firebaseService.isSigned = true;
+        // console.log('firebaseService.auth().currentUser', firebaseService.auth().currentUser);
         setSigned(true);
       } else {
         firebaseService.isSigned = false;
