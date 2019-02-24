@@ -1,5 +1,6 @@
 import * as firebase from "firebase/app"
 import "firebase/firestore"
+import { BehaviorSubject } from "rxjs"
 require('firebase/auth') // this should be imported like that
 
 const config = {
@@ -17,7 +18,7 @@ class Firebase {
   //@ts-ignore
   auth: typeof firebase.auth;
 
-  isSigned: boolean | undefined = undefined;
+  isSigned = new BehaviorSubject<boolean | undefined>(undefined);
 
   constructor() { }
 

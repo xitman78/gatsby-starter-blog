@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography"
 
 const Wrapper = styled.div`
   display: flex;
-  margin-bottom: ${rhythm(2.5)};
+  margin-bottom: ${rhythm(0.5)};
 `
 
 const StyledImage = styled(Image)({

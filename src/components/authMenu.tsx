@@ -40,24 +40,22 @@ const SignOutLink = styled.a`
 
 const AuthMenu = () => {
 
-  const [isSignedIn, setSigned] = useState<boolean | undefined>(firebaseService.isSigned);
+  const [isSignedIn, setSigned] = useState<boolean | undefined>(firebaseService.isSigned.getValue());
 
   useEffect(() => {
-    console.log('------auth status', firebaseService.isSigned);
     const stopAuthListener = firebaseService.auth().onAuthStateChanged(user => {
       if (user) {
-        firebaseService.isSigned = true;
-        // console.log('firebaseService.auth().currentUser', firebaseService.auth().currentUser);
+        firebaseService.isSigned.next(true);
         setSigned(true);
       } else {
-        firebaseService.isSigned = false;
+        firebaseService.isSigned.next(false);
         setSigned(false);
       }
     });
 
     return () => {
       stopAuthListener();
-    }
+    };
 
   }, []);
 
@@ -84,4 +82,3 @@ const AuthMenu = () => {
 
 export default React.memo(AuthMenu, () => true)
 
-// {/* <p>{firebaseService.auth().currentUser!.displayName}! You are now signed-in!</p> */}

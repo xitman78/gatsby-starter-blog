@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import TextareaAutosize from "react-textarea-autosize"
 import firebaseService from "../services/firebase"
@@ -36,9 +36,21 @@ const CommentButton = styled.button`
   }
 `
 
+const ScrollTopSignInLink = styled.a`
+  cursor: pointer;
+`
+
 const CommentForm = ({ postId }: { postId: string }) => {
 
   const [commentText, setCommentText] = useState<string>('');
+  const [isSigned, setIsSigned] = useState<boolean | undefined>(undefined);
+
+  useEffect(() => {
+    const subsription = firebaseService.isSigned.subscribe(value => {
+      setIsSigned(value);
+    });
+    return () => subsription.unsubscribe();
+  }, []);
 
   const onButtonClick = () => {
     firebaseService.createComment(postId, commentText).then(() => {
@@ -49,16 +61,33 @@ const CommentForm = ({ postId }: { postId: string }) => {
 
   };
 
-  return (
-    <Container>
-      <h4>Comments</h4>
-      Your comment:
+  if (isSigned === undefined) {
+    return null;
+  }
+
+  if (isSigned === false) {
+    return (
+      <Container>
+        <h4>Comments</h4>
+        <ScrollTopSignInLink onClick={() => {
+          window.scrollTo(0, 0);
+        }}>To leave a comment please sign in above using your Facebook account.</ScrollTopSignInLink>
+      </Container>
+    );
+  }
+
+  if (isSigned) {
+    return (
+      <Container>
+        <h4>Comments</h4>
+        Your comment:
       <Teaxtarea minRows={1} value={commentText} onInput={(event) => setCommentText(event.target.value)} />
-      <CommentButtonContainer>
-        <CommentButton value="Submit" onClick={onButtonClick} disabled={commentText.length === 0 || commentText.trim().length === 0}>Comment</CommentButton>
-      </CommentButtonContainer>
-    </Container>
-  );
+        <CommentButtonContainer>
+          <CommentButton value="Submit" onClick={onButtonClick} disabled={commentText.length === 0 || commentText.trim().length === 0}>Comment</CommentButton>
+        </CommentButtonContainer>
+      </Container>
+    );
+  }
 };
 
 export default CommentForm
