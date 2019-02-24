@@ -55,7 +55,11 @@ class Firebase {
     return this.comments.add({
       postId: postId.replace(/\//g, ''),
       text,
-      createdAt: this.store.Timestamp.fromDate(new Date())
+      createdAt: this.store.Timestamp.fromDate(new Date()),
+      author: {
+        displayName: this.auth().currentUser!.displayName,
+        photoUrl: this.auth().currentUser!.photoURL || '',
+      }
     });
   }
 }

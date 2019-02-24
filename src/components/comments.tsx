@@ -13,9 +13,10 @@ const CommentContainer = styled.div`
   margin-bottom: 20px;
 `
 
-const CommentText = styled.div`
+const CommentText = styled.pre`
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 14px;
+  margin: 0;
 `
 
 const CommentCreatedDate = styled.div`
@@ -50,11 +51,9 @@ const Comments = ({ postId }: { postId: string }) => {
     <div>
       {
         comments.map(comment => <CommentContainer key={comment.id}>
-          <CommentText>
-            {comment.text}
-          </CommentText>
+          <CommentText>{comment.text}</CommentText>
           <CommentCreatedDate>
-            {secondsToLocalDate(comment.createdAt.seconds)}
+            {comment.author.displayName}, {secondsToLocalDate(comment.createdAt.seconds)}
           </CommentCreatedDate>
         </CommentContainer>)
       }
