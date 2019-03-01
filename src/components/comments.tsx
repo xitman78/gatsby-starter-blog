@@ -39,7 +39,6 @@ const Comments = ({ postId }: { postId: string }) => {
           id: doc.id,
         }));
         setComments(_comments);
-        console.log('Comments', _comments);
       }, error => {
         console.log('Error while listening to comments', error);
       });

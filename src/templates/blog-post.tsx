@@ -2,13 +2,12 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CommentForm from "../components/commentForm"
 import Comments from "../components/comments"
 import { rhythm, scale } from "../utils/typography"
-import fireBaseService from "../services/firebase";
+import FacebookShareButton from "../components/facebookShare";
 
 const StyledUl = styled.ul`
   display: flex;
@@ -16,10 +15,6 @@ const StyledUl = styled.ul`
   justify-content: space-between;
   list-style: none;
   padding: 0;
-`
-
-const StyledHr = styled.hr`
-  margin-bottom: ${rhythm(1)};
 `
 
 const DateParagraph = styled.p`
@@ -50,8 +45,7 @@ class BlogPostTemplate extends React.Component<{
           {post.frontmatter.date}
         </DateParagraph>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <StyledHr />
-        <Bio />
+        <FacebookShareButton url={'https://alexander-cherepnya.netlify.com' + slug} />
 
         <StyledUl>
           <li>
@@ -69,6 +63,7 @@ class BlogPostTemplate extends React.Component<{
             )}
           </li>
         </StyledUl>
+
         <CommentForm postId={slug} />
         <Comments postId={slug} />
       </Layout>
