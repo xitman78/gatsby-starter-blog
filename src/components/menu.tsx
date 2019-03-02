@@ -30,8 +30,8 @@ const Menu = () => (
   <MenuWrapper>
     <MenuWidthHolder>
       <div>
-        <StyledLink to={"/"}>Home</StyledLink>
-        <StyledLink to={"/about"}>About Me</StyledLink>
+        <StyledLink to={"/"}>Blog</StyledLink>
+        <StyledLink to={"/about"}>About</StyledLink>
       </div>
       <AuthMenu />
     </MenuWidthHolder>

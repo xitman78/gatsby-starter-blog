@@ -40,7 +40,10 @@ const FacebookShareButton = ({ url }: { url: string }) => {
   const [sharesCount, setSharesCount] = useState<number | undefined>(undefined);
 
   useEffect(() => {
-    fetch(`https://graph.facebook.com/?fields=id,share,og_object{engagement{count}}&id=${encodeURIComponent(url)}`)
+    if (!window.fetch) {
+      return;
+    }
+    window.fetch(`https://graph.facebook.com/?fields=id,share,og_object{engagement{count}}&id=${encodeURIComponent(url)}`)
       .then(data => {
         return data.json();
       }).then(res => {
