@@ -45,7 +45,7 @@ class BlogPostTemplate extends React.Component<{
           {post.frontmatter.date}
         </DateParagraph>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <FacebookShareButton url={'https://alexander-cherepnya.netlify.com' + slug} />
+        <FacebookShareButton url={'https://alexander-cherepnya.netlify.app' + slug} />
 
         <StyledUl>
           <li>

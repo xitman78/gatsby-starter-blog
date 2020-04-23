@@ -3,7 +3,7 @@ module.exports = {
     title: `Fancy Gatsby Blog`,
     author: `Alexander Cherepnya`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://alexander-cherepnya.netlify.com/`,
+    siteUrl: `https://alexander-cherepnya.netlify.app/`,
     social: {
       twitter: `xitman78`,
     },
